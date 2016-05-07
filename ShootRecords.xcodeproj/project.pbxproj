@@ -15,6 +15,7 @@
 		355D34EC1CDE297D0001B669 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355D34EA1CDE297D0001B669 /* LaunchScreen.storyboard */; };
 		355D34F71CDE29800001B669 /* ShootRecordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355D34F61CDE297F0001B669 /* ShootRecordsTests.swift */; };
 		355D35021CDE29800001B669 /* ShootRecordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355D35011CDE29800001B669 /* ShootRecordsUITests.swift */; };
+		355D35121CDE3AEC0001B669 /* coat1.png in Resources */ = {isa = PBXBuildFile; fileRef = 355D35111CDE3AEC0001B669 /* coat1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		355D34FD1CDE29800001B669 /* ShootRecordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShootRecordsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		355D35011CDE29800001B669 /* ShootRecordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootRecordsUITests.swift; sourceTree = "<group>"; };
 		355D35031CDE29800001B669 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355D35111CDE3AEC0001B669 /* coat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coat1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		355D34DD1CDE297B0001B669 /* ShootRecords */ = {
 			isa = PBXGroup;
 			children = (
+				355D35111CDE3AEC0001B669 /* coat1.png */,
 				355D34DE1CDE297B0001B669 /* AppDelegate.swift */,
 				355D34E01CDE297B0001B669 /* ViewController.swift */,
 				355D34E21CDE297C0001B669 /* Main.storyboard */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355D35121CDE3AEC0001B669 /* coat1.png in Resources */,
 				355D34EC1CDE297D0001B669 /* LaunchScreen.storyboard in Resources */,
 				355D34E91CDE297D0001B669 /* Assets.xcassets in Resources */,
 				355D34E41CDE297C0001B669 /* Main.storyboard in Resources */,
