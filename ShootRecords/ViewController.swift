@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
     
@@ -14,6 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         initImageView()
+        
+        let me = User()
+        me.name = "たなか"
+        
+        let realm = try! Realm()
+        try! realm.write{
+            realm.add(me)
+        }
+        print(realm.objects(User))
     }
     
     /**
