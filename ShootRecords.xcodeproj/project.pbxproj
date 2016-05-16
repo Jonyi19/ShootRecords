@@ -17,6 +17,8 @@
 		355D35021CDE29800001B669 /* ShootRecordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355D35011CDE29800001B669 /* ShootRecordsUITests.swift */; };
 		355D35121CDE3AEC0001B669 /* coat1.png in Resources */ = {isa = PBXBuildFile; fileRef = 355D35111CDE3AEC0001B669 /* coat1.png */; };
 		3584D1A01CE22BD600DE5127 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D19F1CE22BD500DE5127 /* User.swift */; };
+		3584D1A21CE369CD00DE5127 /* Shoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D1A11CE369CD00DE5127 /* Shoot.swift */; };
+		3584D1A41CE37C4D00DE5127 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584D1A31CE37C4D00DE5127 /* Games.swift */; };
 		FBCD9CFBE6DA83F70653FFD9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090793B64EA63DF7B08835A8 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		355D35031CDE29800001B669 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		355D35111CDE3AEC0001B669 /* coat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coat1.png; sourceTree = "<group>"; };
 		3584D19F1CE22BD500DE5127 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3584D1A11CE369CD00DE5127 /* Shoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shoot.swift; sourceTree = "<group>"; };
+		3584D1A31CE37C4D00DE5127 /* Games.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		5738AEED6AED798A718269C2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		66EE9E3AB470AE010B2BF40E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +132,8 @@
 				355D34ED1CDE297D0001B669 /* Info.plist */,
 				355D34E51CDE297C0001B669 /* ShootRecords.xcdatamodeld */,
 				3584D19F1CE22BD500DE5127 /* User.swift */,
+				3584D1A11CE369CD00DE5127 /* Shoot.swift */,
+				3584D1A31CE37C4D00DE5127 /* Games.swift */,
 			);
 			path = ShootRecords;
 			sourceTree = "<group>";
@@ -344,6 +350,8 @@
 				3584D1A01CE22BD600DE5127 /* User.swift in Sources */,
 				355D34E71CDE297C0001B669 /* ShootRecords.xcdatamodeld in Sources */,
 				355D34E11CDE297B0001B669 /* ViewController.swift in Sources */,
+				3584D1A41CE37C4D00DE5127 /* Games.swift in Sources */,
+				3584D1A21CE369CD00DE5127 /* Shoot.swift in Sources */,
 				355D34DF1CDE297B0001B669 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +17,46 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exH-dx-L2f">
+                                <rect key="frame" x="113" y="349" width="30" height="30"/>
+                                <state key="normal" title="③"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0G-7U-75j">
+                                <rect key="frame" x="237" y="260" width="30" height="30"/>
+                                <state key="normal" title="ばつ"/>
+                                <connections>
+                                    <action selector="noPoint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hLh-55-ulT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewe-Go-uje">
+                                <rect key="frame" x="204" y="189" width="30" height="30"/>
+                                <state key="normal" title="２点"/>
+                                <connections>
+                                    <action selector="twoPoint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XsK-dq-hSA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="exH-dx-L2f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="329" id="0kK-dw-LMu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ewe-Go-uje" secondAttribute="bottom" constant="103" id="7iM-KS-za1"/>
+                            <constraint firstItem="ewe-Go-uje" firstAttribute="top" secondItem="exH-dx-L2f" secondAttribute="bottom" constant="8" id="MR6-lO-n0M"/>
+                            <constraint firstItem="exH-dx-L2f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="93" id="QeP-OQ-y5d"/>
+                            <constraint firstItem="ewe-Go-uje" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="257" id="SFc-iP-Xmj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y0G-7U-75j" secondAttribute="trailing" constant="437" id="abC-6c-7C4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ewe-Go-uje" secondAttribute="trailing" constant="257" id="cCH-PU-tNB"/>
+                            <constraint firstItem="Y0G-7U-75j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="93" id="ggj-nr-05f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="exH-dx-L2f" secondAttribute="trailing" constant="437" id="len-g1-u3k"/>
+                            <constraint firstItem="ewe-Go-uje" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="447" id="mSU-dD-qv9"/>
+                            <constraint firstItem="Y0G-7U-75j" firstAttribute="top" secondItem="ewe-Go-uje" secondAttribute="bottom" constant="8" id="uu2-jp-iLG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Y0G-7U-75j" secondAttribute="bottom" constant="145" id="xI7-YV-be5"/>
+                        </constraints>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="414" height="736"/>
+                    <connections>
+                        <outlet property="cort" destination="8bC-Xf-vdC" id="lvr-Ar-dn3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

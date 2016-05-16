@@ -11,19 +11,28 @@ import RealmSwift
 
 class ViewController: UIViewController {
     
+    @IBOutlet var cort: UIView!
+    //shootのdb
+    let shoot_db = Shoot()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         initImageView()
-        
-        let me = User()
-        me.name = "たなか"
-        
-        let realm = try! Realm()
-        try! realm.write{
-            realm.add(me)
-        }
-        print(realm.objects(User))
+
+        //touch画面が出来る
+        cort.userInteractionEnabled = true
+        cort.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(_:))))
+//        cort.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "imageTapped:"))
+//        //        Games()
+//
+//        let me = User()
+//        me.name = "たなか"
+//        
+//        let realm = try! Realm()
+//        try! realm.write{
+//            realm.add(me)
+//        }
+//        print(realm.objects(User))
     }
     
     /**
@@ -41,10 +50,35 @@ class ViewController: UIViewController {
         
         
         self.view.backgroundColor = UIColor(patternImage: image)
-    
+        
     
     }
+    @IBAction func twoPoint(sender: AnyObject) {
+         shoot_db.two_point += 1
+    }
+    @IBAction func noPoint(sender: AnyObject) {
+        shoot_db.miss_point += 1
+    }
 
+    //画面をタップすると点が入る。
+    func imageTapped(sender: UITapGestureRecognizer){
+        
+        do{
+        let realm = try! Realm()
+        try! realm.write{
+            twoPoint(shoot_db)
+            //            shoot_db.two_point += 1
+            noPoint(shoot_db)
+        }
+        
+        print("２点です \(shoot_db.two_point)")
+            return
+        }
+        catch{
+    
+        print("テスト");
+        }
+    }
     
     
     override func didReceiveMemoryWarning() {
