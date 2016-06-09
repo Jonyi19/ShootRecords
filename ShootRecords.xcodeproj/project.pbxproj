@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352882FF1D00738C00011125 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352882FE1D00738B00011125 /* TableView.swift */; };
 		355D34DF1CDE297B0001B669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355D34DE1CDE297B0001B669 /* AppDelegate.swift */; };
 		355D34E11CDE297B0001B669 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355D34E01CDE297B0001B669 /* ViewController.swift */; };
 		355D34E41CDE297C0001B669 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355D34E21CDE297C0001B669 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		090793B64EA63DF7B08835A8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		352882FE1D00738B00011125 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		355D34DB1CDE29770001B669 /* ShootRecords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShootRecords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		355D34DE1CDE297B0001B669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		355D34E01CDE297B0001B669 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				3584D19F1CE22BD500DE5127 /* User.swift */,
 				3584D1A11CE369CD00DE5127 /* Shoot.swift */,
 				3584D1A31CE37C4D00DE5127 /* Games.swift */,
+				352882FE1D00738B00011125 /* TableView.swift */,
 			);
 			path = ShootRecords;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				355D34E71CDE297C0001B669 /* ShootRecords.xcdatamodeld in Sources */,
 				355D34E11CDE297B0001B669 /* ViewController.swift in Sources */,
 				3584D1A41CE37C4D00DE5127 /* Games.swift in Sources */,
+				352882FF1D00738C00011125 /* TableView.swift in Sources */,
 				3584D1A21CE369CD00DE5127 /* Shoot.swift in Sources */,
 				355D34DF1CDE297B0001B669 /* AppDelegate.swift in Sources */,
 			);

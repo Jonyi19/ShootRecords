@@ -9,40 +9,42 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController{
     
     @IBOutlet var cort: UIView!
     //shootのdb
+    
+    private var myRightButton: UIBarButtonItem!
     let shoot_db = Shoot()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         initImageView()
-
+        
         //touch画面が出来る
         cort.userInteractionEnabled = true
         cort.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(_:))))
+        
+        
     }
     
     /**
      背景画像をセットする
- UIColorにpatternImageメソッドを使い背景画像を渡して対象となるviewのbackgroundColorにセットするだけ。これで背景画像が表示出来ます。
- */
-    
+     UIColorにpatternImageメソッドを使い背景画像を渡して対象となるviewのbackgroundColorにセットするだけ。これで背景画像が表示出来ます。
+     - returns: 画像を返す
+     */
     func initImageView(){
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "coat1.png")?.drawInRect(self.view.bounds)
         
         let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
-        
         UIGraphicsEndImageContext()
-        
-        
         self.view.backgroundColor = UIColor(patternImage: image)
         
-    
+        
     }
-
+    
     @IBOutlet weak var twoView: UILabel!
     @IBOutlet weak var noView: UILabel!
     
@@ -77,7 +79,9 @@ class ViewController: UIViewController {
         return
     }
     
-    //２点のカウント
+    /**
+     2点のカウント
+     */
     func twoShoot(){
         let realm = try! Realm()
         try! realm.write{
@@ -86,7 +90,7 @@ class ViewController: UIViewController {
         
         print("２点です \(shoot_db.two_point)")
     }
-
+    
     //０点のカウント
     func noShoot(){
         let realm = try! Realm()
@@ -96,7 +100,7 @@ class ViewController: UIViewController {
         
         print("0点です \(shoot_db.miss_point)")
     }
-
+    
     
     //画面をタップすると点が入る。
     func imageTapped(sender: UITapGestureRecognizer){
@@ -104,9 +108,9 @@ class ViewController: UIViewController {
         if shoot == 2 {
             self.upDateTwoCount()
         }else if shoot == 0{
-        self.upDateNoCount()
+            self.upDateNoCount()
         }
-            return
+        return
         
     }
     
@@ -115,7 +119,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
