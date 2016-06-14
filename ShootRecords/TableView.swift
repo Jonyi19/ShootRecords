@@ -10,30 +10,61 @@ import Foundation
 import UIKit
 import RealmSwift
 
-class TableView: UIViewController,UITableViewDataSource,UITableViewDelegate{
-    
-    
-    @IBOutlet var myTableView: UITableView!
-    
-    func tableView(myTableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 5
-    }
-    
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCellWithIdentifier("myTableView")! as UITableViewCell
-        
-        cell.textLabel!.text = "Swift"
-        
-        return cell
-    }
+class tableView: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.title = self.title! + ""
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    let item = ["aaa","bbb","ccc"]
+    let cellID = "MyCell"
+    
+    
+    @IBOutlet var myTableView: UITableView!
+    
+    //データの総数を返す
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return item.count
+    }
+    
+    /**
+     *  指定した行のデータを返す
+     */
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default,reuseIdentifier: cellID)
+        cell.textLabel?.text = item[indexPath.row]
+        return cell
+    }
+    /**
+     セルを選択する
+     
+     - parameter tableView: <#tableView description#>
+     - parameter indexPath: <#indexPath description#>
+     */
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("segueDetail", sender: self)
+    }
+    /**
+     *  詳細ベージを開いた時に値を受け渡す
+     */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueDetail" {
+        
+        let str = item[self.tableView.indexPathForSelectedRow!.row]
+        let vc = segue.destinationViewController as! ViewController
+        }
+        
+        
+    }
+    
+    
 
     
 }
