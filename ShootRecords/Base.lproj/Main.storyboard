@@ -62,6 +62,22 @@
             </objects>
             <point key="canvasLocation" x="750" y="150"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pJO-cH-xgk">
+            <objects>
+                <navigationController id="Rbf-M8-zbw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4RK-ms-0de">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="v0a-Bx-rxu" kind="relationship" relationship="rootViewController" id="xGI-ur-ktt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lnf-8C-aSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-680" y="-519"/>
+        </scene>
         <!--新規登録-->
         <scene sceneID="UbL-Du-pd9">
             <objects>
@@ -101,22 +117,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOx-Jb-ujQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-38" y="181"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="EtJ-AQ-ul1">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JaF-dS-kXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="QJn-Kb-o6d" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pGL-hj-ntj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="v0a-Bx-rxu" kind="relationship" relationship="rootViewController" id="sbv-4K-z7V"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-276" y="-883"/>
         </scene>
     </scenes>
 </document>
