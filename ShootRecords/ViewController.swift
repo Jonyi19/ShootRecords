@@ -15,17 +15,16 @@ class ViewController: UIViewController{
     @IBOutlet var cort: UIView!
     //shootのdb
     
-    private var myRightButton: UIBarButtonItem!
+    //private var myRightButton: UIBarButtonItem!
     let shoot_db = Shoot()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
         initImageView()
         
         //touch画面が出来る
         cort.userInteractionEnabled = true
         cort.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(_:))))
-        
         
     }
     

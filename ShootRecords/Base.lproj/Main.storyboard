@@ -8,7 +8,7 @@
         <!--コート画面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShootRecords" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="pageSheet" id="BYZ-38-t0r" customClass="ViewController" customModule="ShootRecords" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="o0E-wC-vqM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cells" id="o0E-wC-vqM">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o0E-wC-vqM" id="dfe-Wp-iFY">
@@ -79,7 +79,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="showDetail" identifier="segueDetail" id="SbX-cx-znE"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueDetail" id="q0l-3k-87u"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,8 +89,12 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="vj9-wB-8I4">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="L6i-0P-Ror"/>
+                    <navigationItem key="navigationItem" title="新規登録画面" id="vj9-wB-8I4" userLabel="新規登録画面">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="L6i-0P-Ror">
+                            <connections>
+                                <action selector="clickAdd:" destination="cNZ-rZ-p94" id="0Dd-WT-jK9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
