@@ -13,5 +13,4 @@ class Shoot:Object{
     dynamic var two_point = 0
     dynamic var three_point = 0
     dynamic var miss_point = 0
-    
 }

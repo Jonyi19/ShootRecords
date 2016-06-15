@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tdz-t4-bZ8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--コート画面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShootRecords" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="pageSheet" id="BYZ-38-t0r" customClass="ViewController" customModule="ShootRecords" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,49 +17,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exH-dx-L2f">
-                                <rect key="frame" x="113" y="349" width="30" height="30"/>
-                                <state key="normal" title="③"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0G-7U-75j">
-                                <rect key="frame" x="237" y="260" width="30" height="30"/>
-                                <state key="normal" title="ばつ"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXc-5q-gG3" userLabel="０点ボタン">
+                                <rect key="frame" x="224" y="328" width="30" height="30"/>
+                                <state key="normal" title="０点"/>
                                 <connections>
-                                    <action selector="noPoint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hLh-55-ulT"/>
+                                    <action selector="noBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z4E-1I-X1w"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewe-Go-uje">
-                                <rect key="frame" x="204" y="189" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAy-bx-1nU" userLabel="2点ボタン">
+                                <rect key="frame" x="275" y="328" width="30" height="42"/>
                                 <state key="normal" title="２点"/>
                                 <connections>
-                                    <action selector="twoPoint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XsK-dq-hSA"/>
+                                    <action selector="twoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="otg-fx-nTf"/>
                                 </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゼロシュート" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQm-Ql-tTQ">
+                                <rect key="frame" x="299" y="356" width="102" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="２シュート" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urx-nj-eDa">
+                                <rect key="frame" x="342" y="376" width="85" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d5-MY-34B">
+                                <rect key="frame" x="100" y="416" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="exH-dx-L2f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="329" id="0kK-dw-LMu"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ewe-Go-uje" secondAttribute="bottom" constant="103" id="7iM-KS-za1"/>
-                            <constraint firstItem="ewe-Go-uje" firstAttribute="top" secondItem="exH-dx-L2f" secondAttribute="bottom" constant="8" id="MR6-lO-n0M"/>
-                            <constraint firstItem="exH-dx-L2f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="93" id="QeP-OQ-y5d"/>
-                            <constraint firstItem="ewe-Go-uje" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="257" id="SFc-iP-Xmj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y0G-7U-75j" secondAttribute="trailing" constant="437" id="abC-6c-7C4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ewe-Go-uje" secondAttribute="trailing" constant="257" id="cCH-PU-tNB"/>
-                            <constraint firstItem="Y0G-7U-75j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="93" id="ggj-nr-05f"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="exH-dx-L2f" secondAttribute="trailing" constant="437" id="len-g1-u3k"/>
-                            <constraint firstItem="ewe-Go-uje" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="447" id="mSU-dD-qv9"/>
-                            <constraint firstItem="Y0G-7U-75j" firstAttribute="top" secondItem="ewe-Go-uje" secondAttribute="bottom" constant="8" id="uu2-jp-iLG"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Y0G-7U-75j" secondAttribute="bottom" constant="145" id="xI7-YV-be5"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="コート画面" id="nor-4X-eMT"/>
                     <value key="contentSizeForViewInPopover" type="size" width="414" height="736"/>
                     <connections>
                         <outlet property="cort" destination="8bC-Xf-vdC" id="lvr-Ar-dn3"/>
+                        <outlet property="noView" destination="MQm-Ql-tTQ" id="inw-1D-2RK"/>
+                        <outlet property="twoView" destination="Urx-nj-eDa" id="SAA-Un-Qmi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="319"/>
+            <point key="canvasLocation" x="1562" y="150"/>
+        </scene>
+        <!--新規登録画面-->
+        <scene sceneID="3l9-bH-PaB">
+            <objects>
+                <tableViewController title="新規登録画面" extendedLayoutIncludesOpaqueBars="YES" id="cNZ-rZ-p94" customClass="tableView" customModule="ShootRecords" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="So5-7A-OgM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cells" id="o0E-wC-vqM">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o0E-wC-vqM" id="dfe-Wp-iFY">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueDetail" id="q0l-3k-87u"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cNZ-rZ-p94" id="G10-pg-ewP"/>
+                            <outlet property="delegate" destination="cNZ-rZ-p94" id="Twd-BX-hUn"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="新規登録画面" id="vj9-wB-8I4" userLabel="新規登録画面">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="L6i-0P-Ror">
+                            <connections>
+                                <action selector="clickAdd:" destination="cNZ-rZ-p94" id="0Dd-WT-jK9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myTableView" destination="So5-7A-OgM" id="Ikq-yw-6VQ"/>
+                        <outlet property="tableView" destination="So5-7A-OgM" id="1SY-No-8oI"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sfd-Wr-B4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734" y="110"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yE3-EP-g5q">
+            <objects>
+                <navigationController toolbarHidden="NO" id="tdz-t4-bZ8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rSa-Et-4Ur">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="49u-gB-hQC">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="cNZ-rZ-p94" kind="relationship" relationship="rootViewController" id="l58-on-Fur"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wZs-up-U6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40" y="100"/>
         </scene>
     </scenes>
 </document>
